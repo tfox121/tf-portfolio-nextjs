@@ -1,12 +1,6 @@
 import { Box } from '@mui/material';
-import parser from 'ua-parser-js';
 
 export default function Section({ sectionRef, children }) {
-  const ua = parser();
-  const isMobile = ua.device.type === 'mobile';
-
-  console.log({ isMobile });
-
   return (
     <Box
       display="flex"
@@ -14,7 +8,7 @@ export default function Section({ sectionRef, children }) {
       flexDirection="column"
       alignItems="center"
       ref={sectionRef}
-      py={isMobile ? 3 : 0}
+      py={3}
     >
       {children}
     </Box>
