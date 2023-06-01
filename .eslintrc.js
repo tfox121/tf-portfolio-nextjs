@@ -49,4 +49,12 @@ module.exports = {
     'jest/no-mocks-import': 'off',
     'react/require-default-props': 'off',
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', '.']],
+        extensions: ['.ts', '.js', '.jsx', '.json'],
+      },
+    },
+  },
 };
