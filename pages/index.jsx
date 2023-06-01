@@ -2,11 +2,15 @@ import Head from 'next/head';
 import { Box, IconButton, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRef } from 'react';
-import { Section, WorkItem } from '@/src/lib/components';
+import parser from 'ua-parser-js';
 
+import { Section, WorkItem } from '@/src/lib/components';
 import work from '../work.json';
 
 export default function Home() {
+  const ua = parser();
+  const isMobile = ua.device.type === 'mobile';
+
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const contactRef = useRef(null);
@@ -41,7 +45,7 @@ export default function Home() {
             </Typography>
           </Box>
         </Box>
-        <Box p={1}>
+        <Box py={isMobile ? 3 : 1}>
           <IconButton onClick={() => handleScroll(aboutRef)}>
             <ExpandMoreIcon sx={{ fontSize: 60 }} />
           </IconButton>
@@ -68,7 +72,7 @@ export default function Home() {
             </Typography>
           </Box>
         </Box>
-        <Box p={1}>
+        <Box py={isMobile ? 3 : 1}>
           <IconButton onClick={() => handleScroll(workRef)}>
             <ExpandMoreIcon sx={{ fontSize: 60 }} />
           </IconButton>
