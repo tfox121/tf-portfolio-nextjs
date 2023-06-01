@@ -9,7 +9,6 @@ export default function WorkItem({
   appLink,
   srcLink,
 }) {
-  console.log('he');
   return (
     <Box
       display="flex"
