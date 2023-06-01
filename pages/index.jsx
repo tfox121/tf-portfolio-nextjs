@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
 import { Box, IconButton, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRef } from 'react';
