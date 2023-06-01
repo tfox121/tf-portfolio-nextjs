@@ -5,7 +5,7 @@ export default function Section({ sectionRef, children }) {
   const ua = parser();
   const isMobile = ua.device.type === 'mobile';
 
-  console.log({ device: ua.device });
+  console.log({ isMobile });
 
   return (
     <Box
