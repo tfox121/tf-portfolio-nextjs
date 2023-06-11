@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, IconButton, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { EmailOutlined, LinkedIn, ExpandMore } from '@mui/icons-material';
 import { useRef } from 'react';
 
 import { ContactForm, Section, WorkItem } from '@/src/lib/components';
@@ -38,7 +38,7 @@ export default function Home() {
         </Box>
         <Box py={1}>
           <IconButton onClick={() => handleScroll(aboutRef)}>
-            <ExpandMoreIcon sx={{ fontSize: 60 }} />
+            <ExpandMore sx={{ fontSize: 60 }} />
           </IconButton>
         </Box>
       </Section>
@@ -65,7 +65,7 @@ export default function Home() {
         </Box>
         <Box py={1}>
           <IconButton onClick={() => handleScroll(workRef)}>
-            <ExpandMoreIcon sx={{ fontSize: 60 }} />
+            <ExpandMore sx={{ fontSize: 60 }} />
           </IconButton>
         </Box>
       </Section>
@@ -95,6 +95,11 @@ export default function Home() {
             ))}
           </Box>
         </Box>
+        <Box py={1}>
+          <IconButton onClick={() => handleScroll(contactRef)}>
+            <ExpandMore sx={{ fontSize: 60 }} />
+          </IconButton>
+        </Box>
       </Section>
       <Section sectionRef={contactRef}>
         <Box
@@ -111,6 +116,17 @@ export default function Home() {
           <Box my={4} display="flex" alignItems="center" height="100%">
             <ContactForm />
           </Box>
+        </Box>
+        <Box>
+          <IconButton
+            href="https://www.linkedin.com/in/tfox121/"
+            target="_blank"
+          >
+            <LinkedIn />
+          </IconButton>
+          <IconButton href="mailto:tfox121+portfolio@gmail.com" target="_blank">
+            <EmailOutlined />
+          </IconButton>
         </Box>
       </Section>
     </>
