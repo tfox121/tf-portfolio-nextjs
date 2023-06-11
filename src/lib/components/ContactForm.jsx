@@ -90,7 +90,7 @@ export default function ContactForm() {
             <Alert severity={success ? 'success' : 'warning'}>{result}</Alert>
           </Grid>
         )}
-        <Grid item xs={12} px={5} display="flex" justifyContent="center">
+        <Grid item xs={12} display="flex" justifyContent="center">
           <Button
             type="submit"
             variant="outlined"
