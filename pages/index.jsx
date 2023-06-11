@@ -3,7 +3,7 @@ import { Box, IconButton, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRef } from 'react';
 
-import { Section, WorkItem } from '@/src/lib/components';
+import { ContactForm, Section, WorkItem } from '@/src/lib/components';
 import work from '../work.json';
 
 export default function Home() {
@@ -103,12 +103,13 @@ export default function Home() {
           justifyContent="center"
           flexGrow={1}
           width="100%"
+          height="100%"
         >
           <Typography variant="h2" textAlign="left">
             Contact me
           </Typography>
-          <Box my={2}>
-            <Typography variant="subtitle">Contact box here.</Typography>
+          <Box my={4} display="flex" alignItems="center" height="100%">
+            <ContactForm />
           </Box>
         </Box>
       </Section>
