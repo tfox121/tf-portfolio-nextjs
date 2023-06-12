@@ -1,0 +1,38 @@
+[
+  {
+    "title": "React",
+    "imgSrc": "/images/react.svg"
+  },
+  {
+    "title": "JavaScript",
+    "imgSrc": "/images/javascript.svg"
+  },
+  {
+    "title": "Next",
+    "imgSrc": "/images/next-js.svg"
+  },
+  {
+    "title": "Node",
+    "imgSrc": "/images/node-js.svg"
+  },
+  {
+    "title": "TypeScript",
+    "imgSrc": "/images/typescript.svg"
+  },
+  {
+    "title": "Mocha",
+    "imgSrc": "/images/mocha.svg"
+  },
+  {
+    "title": "MongoDB",
+    "imgSrc": "/images/mongodb.svg"
+  },
+  {
+    "title": "Jest",
+    "imgSrc": "/images/jest.svg"
+  },
+  {
+    "title": "Express",
+    "imgSrc": "/images/express.svg"
+  }
+]
