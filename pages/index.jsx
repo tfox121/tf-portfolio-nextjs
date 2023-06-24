@@ -1,15 +1,29 @@
 import Head from 'next/head';
-import { Box, IconButton, Typography } from '@mui/material';
+import Image from 'next/image';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  IconButton,
+  Typography,
+} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { EmailOutlined, LinkedIn, ExpandMore } from '@mui/icons-material';
 import { useRef } from 'react';
 
 import { ContactForm, Section, WorkItem } from '@/src/lib/components';
+import theme from '@/src/theme';
 import work from '../work.json';
+import tools from '../tools.json';
 
 export default function Home() {
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const contactRef = useRef(null);
+  const matches = useMediaQuery(theme.breakpoints.down('sm'));
+
   const handleScroll = (ref) => {
     ref.current.scrollIntoView();
   };
@@ -61,6 +75,48 @@ export default function Home() {
               freelancing for just over a year now. I&apos;m excited to put my
               hard-earned skills to work in a full-time role.
             </Typography>
+          </Box>
+          <Box
+            py={2}
+            position="relative"
+            width="95vw"
+            marginLeft={!matches && theme.spacing(-15)}
+            left={!matches && '3vw'}
+          >
+            <swiper-container
+              slides-per-view="4"
+              loop="true"
+              speed="1200"
+              space-between={theme.spacing(matches ? 1 : 5)}
+              resistance
+              resistance-ratio="100%"
+              autoplay="true"
+            >
+              {tools.map((tool) => (
+                <swiper-slide key={tool.title}>
+                  <Card sx={{ margin: '2px' }}>
+                    <CardMedia
+                      sx={{ height: matches ? 70 : 140 }}
+                      image={tool.imgSrc}
+                      title={`${tool.title} icon`}
+                    />
+                    <CardContent sx={{ '&&': { padding: 1 } }}>
+                      {/* <Image
+                    src={tool.imgSrc}
+                    alt={`${tool.title} icon`}
+                    width="100"
+                    height="100"
+                  /> */}
+                      {/* <Box mt={1}> */}
+                      <Typography variant="h6" textAlign="center">
+                        {tool.title}
+                      </Typography>
+                      {/* </Box> */}
+                    </CardContent>
+                  </Card>
+                </swiper-slide>
+              ))}
+            </swiper-container>
           </Box>
         </Box>
         <Box py={1}>
