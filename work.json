@@ -10,7 +10,7 @@
     "title": "The Subreddit Game",
     "description": "A full stack project using React and Redux with a Node/Express/MongoDB backend. On this project I really fleshed out my React/Redux knowledge as well as learning about WebSockets to allow seamless multiplayer, and LocalStorage to enable primitive session management.",
     "imgSrc": "/subredditGame.png",
-    "appLink": "https://thesubredditgame.herokuapp.com/",
+    "appLink": "https://subreddit-game.netlify.app/",
     "srcLink": "https://github.com/tfox121/theSubredditGame"
   },
   {
