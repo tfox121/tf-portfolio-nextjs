@@ -29,5 +29,13 @@
     "description": "My original portfolio's contact form handler, which I'm re-using on here! I built a small back-end using AWS API Gateway connected to an AWS Lambda function using the Serverless framework to handle my contact form.",
     "imgSrc": "/images/work/nodeLambda.png",
     "srcLink": "https://github.com/tfox121/contactFormLambda"
+  },
+  {
+    "title": "To Do List",
+    "date": "15/08/19",
+    "description": "For my first independent project I built a small to do list. Over the course of building it I learnt Nunjucks to use as a templating engine which allowed me to implement server-side rendering.",
+    "imgSrc": "/images/work/toDoList.png",
+    "appLink": "https://todolist-58h2.onrender.com/",
+    "srcLink": "https://github.com/tfox121/todolist/"
   }
 ]
